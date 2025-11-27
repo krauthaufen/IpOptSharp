@@ -36,5 +36,4 @@ UpgradeLog.htm
 .DS_Store
 /.vcpkg
 /src/CeresNative/build/
-/libs
 .idea/
