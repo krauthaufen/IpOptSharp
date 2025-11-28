@@ -1,3 +1,4 @@
+**/*.user
 /.native
 Aardvark.log
 .ionide
