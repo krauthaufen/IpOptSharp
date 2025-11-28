@@ -31,6 +31,9 @@ open Microsoft.FSharp.NativeInterop
 let main argv =
     Aardvark.Init()
     
+    IpOpt.test()
+    exit 0
+    
     // Target positions (we want to stay close to these)
     let targetPoints = 
         [| V3d(0.0, 0.0, 0.0)
@@ -167,8 +170,8 @@ let main argv =
         jacobian.ToArray()
     
     // Bounds on variables (reasonable limits)
-    let xLower = Array.create n -10.0
-    let xUpper = Array.create n 10.0
+    let xLower = Array.create n System.Double.NegativeInfinity
+    let xUpper = Array.create n System.Double.PositiveInfinity
     
     // Constraint bounds (all equality constraints = 0)
     let gLower = Array.create m 0.0
