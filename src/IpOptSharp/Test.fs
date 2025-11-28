@@ -24,6 +24,8 @@ let test2() =
          
             IpOpt.MaxIterations 10
             IpOpt.PrintLevel 1
+            IpOpt.ConstraintViolationTolerance 1E-10
+            
             IpOpt.Orthonormal rot
             IpOpt.Minimize (
                 Vec.lengthSquared (rot * V3s ra - ta) +
